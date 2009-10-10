@@ -1,19 +1,16 @@
 Manifest-Version: 1.0
-Ant-Version: Apache Ant 1.7.0
-Created-By: envsam
-Export-Package: fr.imag.adele.fede.workspace.as.platformeclipse;versio
- n="1.0.0"
-Bundle-ClassPath: .
-Bundle-Name: fr.imag.adele.cadse.as.workspace.platformeclipse
-Bundle-Localization: plugin
-Bundle-Vendor: Adele/LIG/ Grenoble University, France
-Eclipse-LazyStart: false
-Bundle-Version: 2.2.1.qualifier
 Bundle-ManifestVersion: 2
-Bundle-Description: Bundle fr.imag.adele.cadse.as.workspace.platformec
- lipse
-Bundle-SymbolicName: fr.imag.adele.cadse.as.workspace.platformeclipse;
- singleton:=true
-Import-Package: fr.imag.adele.fede.workspace.as.platformeclipse;versio
- n="1.0.0",org.osgi.framework;version="1.4.0"
+Bundle-Name: fr.imag.adele.cadse.as.workspace.platformeclipse
+Bundle-SymbolicName: fr.imag.adele.cadse.as.workspace.platformeclipse;singleton:=true
+Bundle-Vendor: Adele/LIG/ Grenoble University, France
+Bundle-Version: 2.2.1.qualifier
+Bundle-Localization: plugin
+Bundle-ClassPath: .
+Eclipse-LazyStart: false
+Export-Package: fr.imag.adele.fede.workspace.as.platformeclipse;version="2.2.1"
+Import-Package: fr.imag.adele.fede.workspace.as.platformeclipse;version="2.2.1",
+ org.osgi.framework;version="1.4.0"
+Created-By: envsam
+Bundle-Description: Bundle fr.imag.adele.cadse.as.workspace.platformecl
+ ipse
 
