@@ -8,7 +8,7 @@ Created-By: Apache Maven Bundle Plugin
 Bundle-Vendor: Adele/LIG/ Grenoble University, France
 Bundle-Version: 2.3.0.SNAPSHOT
 Build-Jdk: 1.6.0_17
-Bnd-LastModified: 1261487999415
+Bnd-LastModified: 1261565733386
 Bundle-ManifestVersion: 2
 Import-Package: fr.imag.adele.cadse.as.platformide,fr.imag.adele.cadse
  .core,org.osgi.framework;version="1.5"
