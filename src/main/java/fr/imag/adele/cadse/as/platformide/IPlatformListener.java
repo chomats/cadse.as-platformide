@@ -16,37 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package fr.imag.adele.fede.workspace.as.platformeclipse;
+package fr.imag.adele.cadse.as.platformide;
 
-import java.io.File;
-import java.util.List;
+public interface IPlatformListener {
 
-import org.osgi.framework.Bundle;
-/**
-
-*/
-public interface IPlatformEclipse {
-
-	/**
-	    @generated
-	*/
-	String AS_ID = "AS.Workspace.PlatformEclipse";
-
-	
-	void addListener(IPlatformListener l);
-	
-	void removeListener(IPlatformListener l);
-	
-	boolean isResourceStarted();
+	void resourceStarted();
 	
 	
-	boolean isUIStarted();
-	
-	File getLocation(boolean wait);
-	
-	Bundle findBundle(String symbolicName);
-	
-	List<Bundle> findBundlePrefix(String prefix);
-	
-	void waitUI();
+	void uiStarted();
 }
