@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.imag.adele.cadse.as.workspace.platformeclipse
+Bundle-SymbolicName: fr.imag.adele.cadse.as.workspace.platformeclipse;singleton:=true
+Bundle-Vendor: Adele/LIG/ Grenoble University, France
+Bundle-Version: 2.2.1.qualifier
+Bundle-Localization: plugin
+Bundle-ClassPath: .
+Eclipse-LazyStart: false
+Export-Package: fr.imag.adele.fede.workspace.as.platformeclipse;version="2.2.1"
+Import-Package: fr.imag.adele.fede.workspace.as.platformeclipse;version="2.2.1",
+ org.osgi.framework;version="1.4.0"
+Created-By: envsam
+Bundle-Description: Bundle fr.imag.adele.cadse.as.workspace.platformecl
+ ipse
+
