@@ -18,45 +18,48 @@
  */
 package fr.imag.adele.cadse.as.platformide;
 
-import fr.imag.adele.cadse.core.CadseException;
-import fr.imag.adele.cadse.core.CadseRuntime;
-import fr.imag.adele.cadse.core.Item;
 import java.io.File;
 import java.net.URL;
 import java.util.List;
 
 import org.osgi.framework.Bundle;
+
+import fr.imag.adele.cadse.core.CadseException;
+import fr.imag.adele.cadse.core.CadseRuntime;
+import fr.imag.adele.cadse.core.Item;
+import fr.imag.adele.cadse.core.content.ContentItem;
+
 /**
 
 */
 public interface IPlatformIDE {
 
 	void addListener(IPlatformListener l);
-	
+
 	void removeListener(IPlatformListener l);
-	
+
 	boolean isResourceStarted();
-	
+
 	boolean isUIStarted();
-	
+
 	File getLocation(boolean wait);
-	
+
 	Bundle findBundle(String symbolicName);
-	
+
 	List<Bundle> findBundlePrefix(String prefix);
-	
+
 	void waitUI();
 
-        /**
+	/**
 	 * Gets the location.
-	 *
+	 * 
 	 * @return the location
 	 */
 	public File getLocation();
 
 	/**
 	 * Notifie changed content.
-	 *
+	 * 
 	 * @param item
 	 *            the item
 	 */
@@ -64,7 +67,7 @@ public interface IPlatformIDE {
 
 	/**
 	 * Refresh.
-	 *
+	 * 
 	 * @param item
 	 *            the item
 	 */
@@ -72,7 +75,7 @@ public interface IPlatformIDE {
 
 	/**
 	 * Sets the read only.
-	 *
+	 * 
 	 * @param item
 	 *            the item
 	 * @param readonly
@@ -82,7 +85,7 @@ public interface IPlatformIDE {
 
 	/**
 	 * Log.
-	 *
+	 * 
 	 * @param type
 	 *            the type
 	 * @param message
@@ -94,7 +97,7 @@ public interface IPlatformIDE {
 
 	/**
 	 * Log.
-	 *
+	 * 
 	 * @param type
 	 *            the type
 	 * @param message
@@ -106,7 +109,7 @@ public interface IPlatformIDE {
 
 	/**
 	 * Begin rule.
-	 *
+	 * 
 	 * @param rule
 	 *            the rule
 	 */
@@ -114,7 +117,7 @@ public interface IPlatformIDE {
 
 	/**
 	 * End rule.
-	 *
+	 * 
 	 * @param rule
 	 *            the rule
 	 */
@@ -122,35 +125,47 @@ public interface IPlatformIDE {
 
 	/**
 	 * Sets the item persistence id.
-	 *
+	 * 
 	 * @param projectName
 	 *            the project name
 	 * @param item
 	 *            the item
-	 *
+	 * 
 	 * @throws CadseException
 	 *             the melusine exception
 	 */
-	public void setItemPersistenceID(String projectName, Item item) throws CadseException;
+	public void setItemPersistenceID(String projectName, Item item)
+			throws CadseException;
 
 	/**
 	 * Copy resource.
-	 *
+	 * 
 	 * @param item
 	 *            the item
 	 * @param path
 	 *            the path
 	 * @param data
 	 *            the data
-	 *
+	 * 
 	 * @throws CadseException
 	 */
-	public void copyResource(Item item, String path, URL data) throws CadseException;
+	public void copyResource(Item item, String path, URL data)
+			throws CadseException;
 
-        public boolean inDevelopmentMode();
+	public boolean inDevelopmentMode();
 
-        public CadseRuntime[] openDialog(boolean askToErase);
+	public CadseRuntime[] openDialog(boolean askToErase);
 
-        public void activateIDE();
+	public void activateIDE();
+
+	/**
+	 * Returns name of main resource related to specified content item. Returns
+	 * null if it does not represents a physical resource.
+	 * 
+	 * @param contentItem
+	 *            an item which represents a content
+	 * @return name of main resource related to specified content item.
+	 */
+	public String getRessourceName(ContentItem contentItem);
 
 }
